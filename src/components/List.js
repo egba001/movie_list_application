@@ -29,16 +29,18 @@ function List() {
             <h2>Characters</h2>
             {/* Return the character component if the fetch unctionn has finished fetching
             data from the api else display loading state to the user interface */}
-            {loading ? (<div>Loading...</div>) : (
-                characters.map((character) => (
-                    <Character 
-                        key={character.id}
-                        name={character.name}
-                        origin={character.origin}
-                        image={character.image}
-                        />
-                ))
-            )}
+            <div className='row'>
+                {loading ? (<div>Loading...</div>) : (
+                    characters.map((character) => (
+                        <Character 
+                            key={character.id}
+                            name={character.name}
+                            origin={character.origin}
+                            image={character.image}
+                            />
+                    ))
+                )}
+            </div>
         </div>
     )
 }
