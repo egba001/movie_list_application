@@ -1,4 +1,3 @@
-
 function Character(character) {
     return (
         <div className="col-3">

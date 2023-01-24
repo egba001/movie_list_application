@@ -8,7 +8,7 @@ function List() {
     const [characters, setCharacters] = useState([]);
 
     useEffect(() => {
-        /* Fetch data from the rick and morty REST api using an await fetch function */
+        /* Fetch data from the rick and morty REST api using an async function */
         async function fetchData() {
             const data = await fetch(
                 'https://rickandmortyapi.com/api/character');
@@ -27,8 +27,8 @@ function List() {
     return (
         <div>
             <h2>Characters</h2>
-            {/* Return the character component if the fetch unctionn has finished fetching
-            data from the api else display loading state to the user interface */}
+            {/* Return the character component if the fetch functionn has finished fetching
+            data from the api else display 'loading...' state in the user interface */}
             <div className='row'>
                 {loading ? (<div>Loading...</div>) : (
                     characters.map((character) => (
